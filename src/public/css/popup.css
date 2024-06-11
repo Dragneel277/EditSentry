@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 400px; /* Set desired width */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  h1 {
+    font-size: 16px;
+  }
+  
+  /* Style for the container */
+  .container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px; /* Add padding to avoid content touching the edges */
+  }
+  
+  /* Style for the buttons */
+  .container button {
+    width: 48%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .container button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Style for the buttons container */
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Style for the Google Sign-in container
+  .google-signin-container {
+    margin-top: 20px; /* Add space between buttons and Google Sign-in 
+  } */
+  
+  /* Add icon styles */
+  .container button i {
+    margin-right: 5px;
+  }
+  

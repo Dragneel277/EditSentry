@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Edit Sentry",
+  "version": "1.0",
+  "description": "Tracks and logs edits in Google Docs.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "identity",
+    "identity.email",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/*",
+    "https://docs.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "876487003013-eghg1lj24k40ts55tuk8u7n8g6pi5mon.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/drive.metadata",
+      "https://www.googleapis.com/auth/documents",
+      "https://www.googleapis.com/auth/userinfo.email",
+      "openid",
+      "https://www.googleapis.com/auth/documents.readonly"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/document/*",
+        "https://docs.googleapis.com/v1/*"
+      ],
+      "js": [
+        "src/public/js/content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "src/public/html/popup.html",
+    "default_icon": {
+      "16": "src/public/images/favicon-16x16.png",
+      "48": "src/public/images/favicon-32x32.png",
+      "128": "src/public/images/android-chrome-192x192.png"
+    }
+  },
+  "icons": {
+    "16": "src/public/images/favicon-16x16.png",
+    "48": "src/public/images/favicon-32x32.png",
+    "128": "src/public/images/android-chrome-192x192.png"
+  }
+}

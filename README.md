@@ -1,1 +1,3 @@
-# EditSentry
+## EditSentry
+
+## Usage
